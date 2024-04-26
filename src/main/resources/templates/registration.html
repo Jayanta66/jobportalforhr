@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+    <!-- Bootstrap CSS -->
+  <link rel="stylesheet" type="text/css" href="" th:href="@{/css/login.css}">
+  <link rel="stylesheet" type="text/css" href="" th:href="@{/css/video_player2.css}">
+  
+    <link rel="stylesheet" type="text/css" href="" th:href="@{/css/med.css}">
+  
+  
+  <script src="static/js/" th:src="@{/js/video_player2.js}" type="text/javascript"></script>
+<title>&nbsp &nbsp &nbspJob Portal</title> 
+
+  
+<style> 
+		body { 
+			margin: 0; 
+			padding: 0; 
+		} 
+
+	/*	div { 
+			position: absolute; 
+			top: 50%; 
+			left: 50%; 
+			transform: translate(-50%, -50%); 
+		} 
+*/
+		h6 { 
+			font-size: 1.0rem; 
+			font-family: serif; 
+			color: #ff1a1a;
+			background-color: #ffe6f9;
+			text-align: center;
+			animation: animate 
+				1.5s linear infinite; 
+		} 
+
+		@keyframes animate { 
+			0% { 
+				opacity: 0; 
+			} 
+
+			50% { 
+				opacity: 0.7; 
+			} 
+
+			100% { 
+				opacity: 0; 
+			} 
+		} 
+	</style>
+
+</head>
+<header>
+<div id="a">
+
+<h1>Job Portal</h1>
+
+
+</div>
+    <div calss= "jay">
+        <a th:href="@{/}">HOME</a>
+    </div>
+
+<div id="b">
+<h2>Already have a account?<h2>
+<div id="c">
+<a href="login">Sign In</a>
+
+</div>
+
+</div>
+
+</header>
+
+<body>
+
+</div>
+
+<footer id="con2">
+<div id="vv">
+	<br>
+	<br>
+		<form action="" th:action="@{/registration}" method="post">
+			<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+		<label>First Name</label>
+		<input type="text" id="firstname" name="firstname" placeholder="FIRST NAME"/>
+		
+		<br>
+		<br>
+		
+		<label>Last Name</label>
+		<input type="text" id="lastname" name="lastname" placeholder="LAST NAME"/>
+
+		<br>
+		<br>
+	
+		<label>EMAIL</label>
+		<input type="text" id="email" name="email" placeholder="EMAIL"/>
+		
+		<br>
+		<br>
+		<label>MOBILE</label>
+		<input type="text" id="mobile" name="mobile" placeholder="MOBILE">
+		
+		<br>
+		<br>
+		<label>Password</label>
+		<input type="password" id="password" name="password" placeholder="PASSWORD"/>
+		
+		<br>
+		<br>
+		<button type="submit">Register</button>
+				
+	</form>
+	</div>
+	<br>
+	<div>
+	<span>Already a User?<a href="/" th:href="@{/login}">Login</a></span>
+</div>
+<br>
+
+
+<!-- 
+<button><p>MAKE MY Class Greate</p></button
+ -->
+
+<div id="sf">
+
+
+</div>
+</footer>
+</body>
+</html>

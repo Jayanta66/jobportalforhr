@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Product Manager</title>
+
+<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=661f83ed696c5b0019fbab09&product=inline-share-buttons&source=platform" async="async"></script>
+
+</head>
+<body>
+<div align="center">	
+		
+	<h1>Job Manager</h1>
+	
+	<a href="new">Create New Job</a>	
+	    <div class="logout">     	
+    <a class="logout" th:href="@{/logout}">logout</a>
+    </div>
+	
+	
+	<br/><br/>
+		<!--  form action="#" th:action="@{/index2}" th:object="${product}" method="post"-->
+	<form th:action="@{/joblist}">
+		Filter: <input type="text" name="keyword" id="keyword" size="50" th:value="${keyword}" required />
+		&nbsp;
+		<input type="submit" value="Search" />
+		&nbsp;
+		<input type="button" value="Clear" id="btnClear" onclick="clearSearch()" />
+	</form>
+	<br/><br/>
+	
+	<table border="1" cellpadding="10">
+		<thead>
+			<tr>
+				<th>Application ID</th>
+				<th>Jobdesignation</th>
+				<th>Department</th>
+				<th>Salary</th>
+				<th>Location</th>
+				<th>Noticepriod</th>	
+				<th>Job Type</th>
+				<th>Job Description</th>	
+					
+				
+				<th>Actions</th>				
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="product : ${listProducts}">
+				<td th:text="${product.applicationid}">Application ID</td>
+				<td th:text="${product.jobdesignation}">jobdesignation</td>
+				<td th:text="${product.department}">department</td>
+				<td th:text="${product.salary}">Made in</td>
+				<td th:text="${product.location}">Price</td>
+				<td th:text="${product.noticepriod}">Price</td>
+				<td th:text="${product.jobtype}">Price</td>
+				<td th:text="${product.jobdescription}">Price</td>
+				
+				<td>
+					<a th:href="@{'/edit/' + ${product.id}}">Edit</a>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<a th:href="@{'/delete/' + ${product.id}}">Delete</a>
+					<br><br>
+<div class="sharethis-inline-share-buttons"></div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<script type="text/javascript">
+	function clearSearch() {
+		window.location = "[[@{/joblist}]]";
+	}
+</script>
+
+
+
+
+</body>
+</html>
