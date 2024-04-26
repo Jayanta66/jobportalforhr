@@ -8,8 +8,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="product")
-public class Product {
+@Table(name="job")
+public class Job {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,7 +33,7 @@ public class Product {
 	@Column(name="jobdescription")
 	private	String jobdescription;
 
-	protected Product() {
+	protected Job() {
 	}
 
 	public Long getId() {

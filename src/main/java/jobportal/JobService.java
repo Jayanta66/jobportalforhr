@@ -8,27 +8,27 @@ import org.springframework.stereotype.Service;
 
 
 @Service
-public class ProductService {
+public class JobService {
 	@Autowired
-	private ProductRepository repo;
+	private JobRepository repo;
 	
 //	@Override
-	public List<Product> listAll() {
+	public List<Job> listAll() {
 	        return repo.findAll();
 	}
 	
-	public List<Product> listAll(String keyword) {
+	public List<Job> listAll(String keyword) {
 		if (keyword != null) {
 			return repo.search(keyword);
 		}
 		return repo.findAll();
 	}
 	
-	public void save(Product product) {
+	public void save(Job product) {
 		repo.save(product);
 	}
 	
-	public Product get(Long id) {
+	public Job get(Long id) {
 		return repo.findById(id).get();
 	}
 	
