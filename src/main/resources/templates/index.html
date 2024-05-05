@@ -83,6 +83,13 @@
 	</form>
 	<br/><br/>
 	
+		<table border="1" cellpadding="10">
+	
+		<div th:if="${totaljob > 1}">
+		Total Job: [[${totaljob}]]
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	</div>
+	
 	<table border="1" cellpadding="10">
 		<thead>
 			<tr>
@@ -106,6 +113,7 @@
 				<td th:text="${product.noticepriod}">Price</td>
 				<td th:text="${product.jobtype}">Price</td>
 				<td th:text="${product.jobdescription}">Price</td>
+<div class="sharethis-inline-share-buttons"></div>
 
 			</tr>
 		</tbody>

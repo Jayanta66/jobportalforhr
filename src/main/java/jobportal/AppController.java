@@ -30,6 +30,10 @@ public class AppController {
 	@RequestMapping({"/","index"})
 	public String viewHomePagee(Model model, @Param("keyword") String keyword) {
 		List<Job> listProducts = service.listAll(keyword);
+
+		int totaljob  = listProducts.size();
+
+		model.addAttribute("totaljob", totaljob);
 		model.addAttribute("listProducts", listProducts);
 		model.addAttribute("keyword", keyword);
 		
