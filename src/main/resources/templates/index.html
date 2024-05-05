@@ -6,6 +6,7 @@
   <link rel="stylesheet" type="text/css" href="" th:href="@{/css/index.css}">
   
     <link rel="stylesheet" type="text/css" href="" th:href="@{/css/med.css}">
+  <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=661f83ed696c5b0019fbab09&product=inline-share-buttons&source=platform" async="async"></script>
   
   
 <title>&nbsp &nbsp &nbspjob portal</title>
@@ -91,9 +92,14 @@
 	</div>
 	
 	<table border="1" cellpadding="10">
+	
+		<div th:if="${totaljob > 1}">
+		Total Job: [[${totaljob}]]
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	</div>
 		<thead>
 			<tr>
-				<th>Job ID</th>
+				<th>Application ID</th>
 				<th>Jobdesignation</th>
 				<th>Department</th>
 				<th>Salary</th>
@@ -101,20 +107,27 @@
 				<th>Noticepriod</th>	
 				<th>Job Type</th>
 				<th>Job Description</th>	
+					
+				
+				<th>Actions</th>				
 			</tr>
 		</thead>
 		<tbody>
 			<tr th:each="product : ${listProducts}">
-				<td th:text="${product.id}">Product ID</td>
+				<td th:text="${product.applicationid}">Application ID</td>
 				<td th:text="${product.jobdesignation}">jobdesignation</td>
 				<td th:text="${product.department}">department</td>
-				<td th:text="${product.salary}">Made in</td>
-				<td th:text="${product.location}">Price</td>
-				<td th:text="${product.noticepriod}">Price</td>
-				<td th:text="${product.jobtype}">Price</td>
-				<td th:text="${product.jobdescription}">Price</td>
+				<td th:text="${product.salary}">salary</td>
+				<td th:text="${product.location}">Location</td>
+				<td th:text="${product.noticepriod}">notice priod</td>
+				<td th:text="${product.jobtype}">jobtype</td>
+				<td th:text="${product.jobdescription}">description</td>
+				
+				<td>
+
 <div class="sharethis-inline-share-buttons"></div>
 
+				</td>
 			</tr>
 		</tbody>
 	</table>
