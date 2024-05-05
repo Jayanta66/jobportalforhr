@@ -1,8 +1,11 @@
 package jobportal;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.repository.query.Param;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -46,8 +49,20 @@ public class AppController {
 	
 	@RequestMapping("/joblist")
 	public String viewHomePage(Model model, @Param("keyword") String keyword) {
+
+		
 		List<Job> listProducts = service.listAll(keyword);
+		
+		
+		int totaljob  = listProducts.size();
+
 		model.addAttribute("listProducts", listProducts);
+		
+		
+		
+		model.addAttribute("totaljob", totaljob);
+
+		
 		model.addAttribute("keyword", keyword);
 		
 		return "/joblist";

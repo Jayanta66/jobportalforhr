@@ -3,6 +3,10 @@ package jobportal;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 
@@ -14,7 +18,9 @@ public class JobService {
 	
 //	@Override
 	public List<Job> listAll() {
-	        return repo.findAll();
+		
+		//Pageable pageable = PageRequest.of(pageNum - 1, 5);
+		return repo.findAll();
 	}
 	
 	public List<Job> listAll(String keyword) {
@@ -35,5 +41,7 @@ public class JobService {
 	public void delete(Long id) {
 		repo.deleteById(id);
 	}
+	
+
 	
 }
