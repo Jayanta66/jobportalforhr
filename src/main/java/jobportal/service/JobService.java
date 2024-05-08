@@ -1,4 +1,4 @@
-package jobportal;
+package jobportal.service;
 
 import java.util.List;
 
@@ -8,6 +8,9 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+
+import jobportal.beans.Job;
+import jobportal.repository.JobRepository;
 
 
 

@@ -1,4 +1,4 @@
-package jobportal;
+package jobportal.beans;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -33,7 +33,7 @@ public class Job {
 	@Column(name="jobdescription")
 	private	String jobdescription;
 
-	protected Job() {
+	public Job() {
 	}
 
 	public Long getId() {

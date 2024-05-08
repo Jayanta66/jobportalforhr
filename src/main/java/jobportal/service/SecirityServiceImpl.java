@@ -1,4 +1,4 @@
-package jobportal;
+package jobportal.service;
 
 import java.util.Arrays;
 
@@ -17,6 +17,8 @@ import org.springframework.stereotype.Service;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jobportal.beans.User;
+import jobportal.repository.UserRepository;
 
 @Service
 public class SecirityServiceImpl implements SecurityService {

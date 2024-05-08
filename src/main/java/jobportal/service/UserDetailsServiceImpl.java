@@ -1,10 +1,13 @@
-package jobportal;
+package jobportal.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+
+import jobportal.beans.User;
+import jobportal.repository.UserRepository;
 
 //import com.example.liveweb.bean.User;
 //import com.example.liveweb.repository.UserRepository;

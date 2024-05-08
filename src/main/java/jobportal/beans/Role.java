@@ -1,4 +1,4 @@
-package jobportal;
+package jobportal.beans;
 
 import java.util.Set;
 

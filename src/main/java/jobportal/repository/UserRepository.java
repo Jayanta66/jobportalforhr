@@ -1,6 +1,8 @@
-package jobportal;
+package jobportal.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import jobportal.beans.User;
 
 //import com.example.liveweb.bean.User;
 

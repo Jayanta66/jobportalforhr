@@ -1,4 +1,4 @@
-package jobportal;
+package jobportal.controller;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -21,11 +21,17 @@ import org.springframework.web.servlet.ModelAndView;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jobportal.beans.Job;
+import jobportal.beans.User;
+import jobportal.repository.UserRepository;
+import jobportal.service.JobService;
+import jobportal.service.SecurityService;
 
 @Controller
 public class AppController {
 	@Autowired
 	private JobService service;
+	
 		
 	@RequestMapping({"/","index"})
 	public String viewHomePagee(Model model, @Param("keyword") String keyword) {
