@@ -90,8 +90,8 @@ public class AppController {
 	}
 	
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
-	public String saveProduct(@ModelAttribute("product") Job product) {
-		service.save(product);
+	public String saveJob(@ModelAttribute("joblist") Job joblist) {
+		service.save(joblist);
 		
 		return "redirect:/joblist";
 	}
