@@ -32,7 +32,7 @@ public class AppController {
 	@Autowired
 	private JobService service;
 	
-		
+	 	
 	@RequestMapping({"/","index"})
 	public String viewHomePagee(Model model, @Param("keyword") String keyword) {
 		List<Job> listProducts = service.listAll(keyword);

@@ -20,7 +20,7 @@ import org.springframework.security.web.context.SecurityContextRepository;
 @Configuration
 @EnableWebSecurity
 public class MySecurityConfig {
-	
+	 
 	@Autowired
 	UserDetailsService userDetailsService; 
 	

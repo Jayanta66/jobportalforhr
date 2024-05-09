@@ -8,10 +8,7 @@ import org.springframework.stereotype.Service;
 
 import jobportal.beans.User;
 import jobportal.repository.UserRepository;
-
-//import com.example.liveweb.bean.User;
-//import com.example.liveweb.repository.UserRepository;
-
+ 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 

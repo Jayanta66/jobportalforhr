@@ -10,5 +10,5 @@ public class JobPortalApplication extends SpringBootServletInitializer {
 	public static void main(String[] args) {
 		SpringApplication.run(JobPortalApplication.class, args);
 	}
-
+ 
 }

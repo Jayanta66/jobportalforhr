@@ -12,8 +12,6 @@ import org.springframework.stereotype.Service;
 import jobportal.beans.Job;
 import jobportal.repository.JobRepository;
 
-
-
 @Service
 public class JobService {
 	@Autowired

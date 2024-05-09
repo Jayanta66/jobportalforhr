@@ -22,7 +22,7 @@ import jobportal.repository.UserRepository;
 
 @Service
 public class SecirityServiceImpl implements SecurityService {
-
+ 
 	@Autowired
 	UserDetailsService  userDetailsService;
 	
