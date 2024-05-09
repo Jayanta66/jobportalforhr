@@ -15,7 +15,6 @@ public class Job {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-//	@GeneratedValue(strategy = GenerationType.AUTO)	
 	@Column(name="applicationid")
 	private Long applicationid;
 	@Column(name="jobdesignation")

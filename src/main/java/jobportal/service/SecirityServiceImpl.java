@@ -57,14 +57,5 @@ public class SecirityServiceImpl implements SecurityService {
 		return user;
 	}
 	
-//	@Override
-//	public User save(UserRegistrationDto registrationDto) {
-//		User user = new User(null, registrationDto.getFirstName(), 
-//				registrationDto.getLastName(), registrationDto.getEmail(),
-//				passwordEncoder.encode(registrationDto.getPassword()),registrationDto.getCity(),registrationDto.getState(), Arrays.asList(new Role("ROLE_USER")));
-//		
-//		return userRepository.save(user);
-//	}
-//	
 
 }

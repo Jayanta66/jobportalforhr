@@ -19,9 +19,7 @@ public class JobService {
 	
 //	@Override
 	public List<Job> listAll() {
-		
-		//Pageable pageable = PageRequest.of(pageNum - 1, 5);
-		return repo.findAll();
+				return repo.findAll();
 	}
 	
 	public List<Job> listAll(String keyword) {
