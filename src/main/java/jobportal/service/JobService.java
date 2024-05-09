@@ -3,10 +3,6 @@ package jobportal.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import jobportal.beans.Job;
@@ -17,7 +13,6 @@ public class JobService {
 	@Autowired
 	private JobRepository repo;
 	
-//	@Override
 	public List<Job> listAll() {
 				return repo.findAll();
 	}
